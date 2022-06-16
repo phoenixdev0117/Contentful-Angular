@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 3000 --disable-host-check",
+    "start": "node done.js && ng serve --port 3000 --disable-host-check",
     "build": "ng build --base-href /product-catalogue-web.ts/",
     "test": "ng test",
     "lint": "ng lint",

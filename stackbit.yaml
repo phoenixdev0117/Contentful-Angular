@@ -1,5 +1,5 @@
 stackbitVersion: ~0.5.5
-ssgName: custom
+ssgName: nextjs
 cmsName: contentful
 nodeVersion: '14'
 
