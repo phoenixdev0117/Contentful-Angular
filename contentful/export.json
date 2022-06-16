@@ -1,0 +1,2595 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "brand",
+        "type": "ContentType",
+        "createdAt": "2022-06-15T14:02:42.438Z",
+        "updatedAt": "2022-06-15T14:02:42.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-15T14:02:42.912Z",
+        "firstPublishedAt": "2022-06-15T14:02:42.912Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        }
+      },
+      "displayField": "companyName",
+      "name": "Brand",
+      "description": null,
+      "fields": [
+        {
+          "id": "companyName",
+          "name": "Company name",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "companyDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "website",
+          "name": "Website",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "twitter",
+          "name": "Twitter",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "Phone #",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "product",
+        "type": "ContentType",
+        "createdAt": "2022-06-15T14:02:42.516Z",
+        "updatedAt": "2022-06-15T14:02:42.942Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-15T14:02:42.942Z",
+        "firstPublishedAt": "2022-06-15T14:02:42.942Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        }
+      },
+      "displayField": "productName",
+      "name": "Product",
+      "description": null,
+      "fields": [
+        {
+          "id": "productName",
+          "name": "Product name",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sizetypecolor",
+          "name": "Size/Type/Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "categories",
+          "name": "Categories",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "category"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "price",
+          "name": "Price",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "brand",
+          "name": "Brand",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "brand"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "quantity",
+          "name": "Quantity",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sku",
+          "name": "SKU",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "website",
+          "name": "Available at",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "category",
+        "type": "ContentType",
+        "createdAt": "2022-06-15T14:02:42.732Z",
+        "updatedAt": "2022-06-15T14:02:42.907Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-15T14:02:42.907Z",
+        "firstPublishedAt": "2022-06-15T14:02:42.907Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Category",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "categoryDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5u403xny70b7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 1,
+        "createdAt": "2022-06-15T14:02:43.034Z",
+        "createdBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:43.034Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "brand",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "companyName"
+        },
+        {
+          "fieldId": "logo"
+        },
+        {
+          "fieldId": "companyDescription"
+        },
+        {
+          "fieldId": "website"
+        },
+        {
+          "fieldId": "twitter"
+        },
+        {
+          "fieldId": "email"
+        },
+        {
+          "fieldId": "phone"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5u403xny70b7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 1,
+        "createdAt": "2022-06-15T14:02:43.033Z",
+        "createdBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:43.033Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "product",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "productName"
+        },
+        {
+          "fieldId": "slug"
+        },
+        {
+          "fieldId": "productDescription"
+        },
+        {
+          "fieldId": "sizetypecolor"
+        },
+        {
+          "fieldId": "image"
+        },
+        {
+          "fieldId": "tags"
+        },
+        {
+          "fieldId": "categories"
+        },
+        {
+          "fieldId": "price"
+        },
+        {
+          "fieldId": "brand"
+        },
+        {
+          "fieldId": "quantity"
+        },
+        {
+          "fieldId": "sku"
+        },
+        {
+          "fieldId": "website"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5u403xny70b7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 1,
+        "createdAt": "2022-06-15T14:02:42.955Z",
+        "createdBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:42.955Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5JyrJiiomUI3mj8CrwPKe9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "category",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title"
+        },
+        {
+          "fieldId": "icon"
+        },
+        {
+          "fieldId": "categoryDescription"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "4BqrajvA8E6qwgkieoqmqO",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:53.168Z",
+        "updatedAt": "2022-06-15T14:02:53.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "SoSo Wall Clock"
+        },
+        "slug": {
+          "en-US": "soso-wall-clock"
+        },
+        "productDescription": {
+          "en-US": "The newly released SoSo Clock from Lemnos marries simple, clean design and bold, striking features. Its saturated marigold face is a lively pop of color to white or grey walls, but would also pair nicely with navy and maroon. Where most clocks feature numbers at the border of the clock, the SoSo brings them in tight to the middle, leaving a wide space between the numbers and the slight frame. The hour hand provides a nice interruption to the black and yellow of the clock - it is featured in a brilliant white. Despite its bold color and contrast, the SoSo maintains a clean, pure aesthetic that is suitable to a variety of contemporary interiors."
+        },
+        "sizetypecolor": {
+          "en-US": "10\" x 2.2\""
+        },
+        "image": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "KTRF62Q4gg60q6WCsWKw8"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            "home décor",
+            "clocks",
+            "interior design",
+            "yellow",
+            "gifts"
+          ]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7LAnCobuuWYSqks6wAwY2a"
+              }
+            }
+          ]
+        },
+        "price": {
+          "en-US": 120
+        },
+        "brand": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4LgMotpNF6W20YKmuemW0a"
+            }
+          }
+        },
+        "quantity": {
+          "en-US": 3
+        },
+        "sku": {
+          "en-US": "B00MG4ULK2"
+        },
+        "website": {
+          "en-US": "http://store.dwell.com/soso-wall-clock.html"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "24DPGBDeGEaYy8ms4Y8QMQ",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:53.957Z",
+        "updatedAt": "2022-06-15T14:02:53.957Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "category"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Toys"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6t4HKjytPi0mYgs240wkG"
+            }
+          }
+        },
+        "categoryDescription": {
+          "en-US": "Shop for toys, games, educational aids"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "JrePkDVYomE8AwcuCUyMi",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:53.959Z",
+        "updatedAt": "2022-06-15T14:02:53.959Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "brand"
+          }
+        }
+      },
+      "fields": {
+        "companyName": {
+          "en-US": "Playsam"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4zj1ZOfHgQ8oqgaSKm4Qo2"
+            }
+          }
+        },
+        "companyDescription": {
+          "en-US": "Playsam is the leading Scandinavian design company for executive wooden toy gift. Scandinavian design playful creativity, integrity and sophistication are Playsam. Scandinavian design and wooden toy makes Playsam gift lovely to the world of design since 1984."
+        },
+        "website": {
+          "en-US": "http://playsam.com/"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "6dbjWqNd9SqccegcqYq224",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:53.963Z",
+        "updatedAt": "2022-06-15T14:02:53.963Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "Whisk Beater"
+        },
+        "slug": {
+          "en-US": "whisk-beater"
+        },
+        "productDescription": {
+          "en-US": "A creative little whisk that comes in 8 different colors. Handy and easy to clean after use. A great gift idea."
+        },
+        "sizetypecolor": {
+          "en-US": "0.8 x 0.8 x 11.2 inches; 1.6 ounces"
+        },
+        "image": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "10TkaLheGeQG6qQGqWYqUI"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            "kitchen",
+            "accessories",
+            "whisk",
+            "scandinavia",
+            "design"
+          ]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7LAnCobuuWYSqks6wAwY2a"
+              }
+            }
+          ]
+        },
+        "price": {
+          "en-US": 22
+        },
+        "brand": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "651CQ8rLoIYCeY6G0QG22q"
+            }
+          }
+        },
+        "quantity": {
+          "en-US": 89
+        },
+        "sku": {
+          "en-US": "B0081F2CCK"
+        },
+        "website": {
+          "en-US": "http://www.amazon.com/dp/B0081F2CCK/"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "4LgMotpNF6W20YKmuemW0a",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:53.965Z",
+        "updatedAt": "2022-06-15T14:02:53.965Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "brand"
+          }
+        }
+      },
+      "fields": {
+        "companyName": {
+          "en-US": "Lemnos"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2Y8LhXLnYAYqKCGEWG4EKI"
+            }
+          }
+        },
+        "companyDescription": {
+          "en-US": "TAKATA Lemnos Inc. was founded in 1947 as a brass casting manufacturing industry in Takaoka-city, Toyama Prefecture, Japan and we launched out into the full-scale business trade with Seiko Clock Co., Ltd. since 1966.\n\nWe entered into the development for the original planning from late 1980 and \"Lemnos Brand\" recognized as the global design clock by a masterpiece \"HOLA\" designed by Kazuo KAWASAKI which released in 1989.\n\nAfterwards, we made a lot of projects with well-known designers who took in active in Japan and overseas such as Riki WATANABE, Kazuo KAWASAKI, Shin AZUMI, Tomoko AZUMI, Kanae TSUKAMOTO etc. and we made announcement of their fine works abounding in artistry and prominent designs. In addition, we realized to make a special project by the collaboration with Andrea Branzi, a well-known architect in the world.\n\nLemnos brand products are now highly praised from the design shops and the interior shops all over the world.\n\nIn recent years, we also have been given high priority to develop interior accessories making full use of our traditional techniques by the founding manufacturer and we always focus our minds on the development for the new Lemnos products in the new market.\n\nOur Lemnos products are made carefully by our craftsmen finely honed skillful techniques in Japan. They surely bring out the attractiveness of the materials to the maximum and create fine products not being influenced on the fashion trend accordingly. TAKATA Lemnos Inc. definitely would like to be innovative and continuously propose the beauty lasts forever."
+        },
+        "website": {
+          "en-US": "http://www.lemnos.jp/en/"
+        },
+        "email": {
+          "en-US": "info@acgears.com"
+        },
+        "phone": {
+          "en-US": [
+            "+1 212 260 2269"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "3DVqIYj4dOwwcKu6sgqOgg",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:55.038Z",
+        "updatedAt": "2022-06-15T14:02:55.038Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "Hudson Wall Cup"
+        },
+        "slug": {
+          "en-US": "hudson-wall-cup"
+        },
+        "productDescription": {
+          "en-US": "Wall Hanging Glass Flower Vase and Terrarium"
+        },
+        "sizetypecolor": {
+          "en-US": "3 x 3 x 5 inches; 5.3 ounces"
+        },
+        "image": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "Xc0ny7GWsMEMCeASWO2um"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            "vase",
+            "flowers",
+            "accessories"
+          ]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7LAnCobuuWYSqks6wAwY2a"
+              }
+            }
+          ]
+        },
+        "price": {
+          "en-US": 11
+        },
+        "brand": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "651CQ8rLoIYCeY6G0QG22q"
+            }
+          }
+        },
+        "quantity": {
+          "en-US": 101
+        },
+        "sku": {
+          "en-US": "B00E82D7I8"
+        },
+        "website": {
+          "en-US": "http://www.amazon.com/dp/B00E82D7I8/"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "651CQ8rLoIYCeY6G0QG22q",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:55.047Z",
+        "updatedAt": "2022-06-15T14:02:55.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "brand"
+          }
+        }
+      },
+      "fields": {
+        "companyName": {
+          "en-US": "Normann Copenhagen"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3wtvPBbBjiMKqKKga8I2Cu"
+            }
+          }
+        },
+        "companyDescription": {
+          "en-US": "Normann Copenhagen is a way of living - a mindset. We love to challenge the conventional design rules. This is why you will find traditional materials put into untraditional use such as a Stone Hook made of Icelandic stones, a vase made out of silicon and last but not least a dog made out of plastic."
+        },
+        "website": {
+          "en-US": "http://www.normann-copenhagen.com/"
+        },
+        "twitter": {
+          "en-US": "https://twitter.com/NormannCPH"
+        },
+        "email": {
+          "en-US": "normann@normann-copenhagen.com"
+        },
+        "phone": {
+          "en-US": [
+            "+45 35 55 44 59"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "7LAnCobuuWYSqks6wAwY2a",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:55.119Z",
+        "updatedAt": "2022-06-15T14:02:55.119Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "category"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home & Kitchen"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6m5AJ9vMPKc8OUoQeoCS4o"
+            }
+          }
+        },
+        "categoryDescription": {
+          "en-US": "Shop for furniture, bedding, bath, vacuums, kitchen products, and more"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "5KsDBWseXY6QegucYAoacS",
+        "type": "Entry",
+        "createdAt": "2022-06-15T14:02:55.121Z",
+        "updatedAt": "2022-06-15T14:02:55.121Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "Playsam Streamliner Classic Car, Espresso"
+        },
+        "slug": {
+          "en-US": "playsam-streamliner-classic-car-espresso"
+        },
+        "productDescription": {
+          "en-US": "A classic Playsam design, the Streamliner Classic Car has been selected as Swedish Design Classic by the Swedish National Museum for its inventive style and sleek surface. It's no wonder that this wooden car has also been a long-standing favorite for children both big and small!"
+        },
+        "sizetypecolor": {
+          "en-US": "Length: 135 mm | color: espresso, green, or icar (white)"
+        },
+        "image": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "wtrHxeu3zEoEce2MokCSi"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            "wood",
+            "toy",
+            "car",
+            "sweden",
+            "design"
+          ]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "24DPGBDeGEaYy8ms4Y8QMQ"
+              }
+            }
+          ]
+        },
+        "price": {
+          "en-US": 44
+        },
+        "brand": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "JrePkDVYomE8AwcuCUyMi"
+            }
+          }
+        },
+        "quantity": {
+          "en-US": 56
+        },
+        "sku": {
+          "en-US": "B001R6JUZ2"
+        },
+        "website": {
+          "en-US": "http://www.amazon.com/dp/B001R6JUZ2/"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "Xc0ny7GWsMEMCeASWO2um",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.139Z",
+        "updatedAt": "2022-06-15T14:02:52.139Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hudson Wall Cup "
+        },
+        "description": {
+          "en-US": "Merchandise image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/Xc0ny7GWsMEMCeASWO2um/386ee028262461f49449a3dcde7712ba/jqvtazcyfwseah9fmysz.jpg",
+            "details": {
+              "size": 48751,
+              "image": {
+                "width": 600,
+                "height": 600
+              }
+            },
+            "fileName": "jqvtazcyfwseah9fmysz.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "10TkaLheGeQG6qQGqWYqUI",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.152Z",
+        "updatedAt": "2022-06-15T14:02:52.152Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Whisk beaters"
+        },
+        "description": {
+          "en-US": "Merchandise photo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/10TkaLheGeQG6qQGqWYqUI/e6485b04c5f6991cfbae6ef8e332976f/ryugj83mqwa1asojwtwb.jpg",
+            "details": {
+              "size": 28435,
+              "image": {
+                "width": 450,
+                "height": 600
+              }
+            },
+            "fileName": "ryugj83mqwa1asojwtwb.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "6s3iG2OVmoUcosmA8ocqsG",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.157Z",
+        "updatedAt": "2022-06-15T14:02:52.157Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "House icon"
+        },
+        "description": {
+          "en-US": "Category icon set"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/6s3iG2OVmoUcosmA8ocqsG/d576e30a70d1a105ec1966ba033c0d27/1418244847_Streamline-18-256__1_.png",
+            "details": {
+              "size": 4244,
+              "image": {
+                "width": 250,
+                "height": 250
+              }
+            },
+            "fileName": "1418244847_Streamline-18-256 (1).png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "2Y8LhXLnYAYqKCGEWG4EKI",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.184Z",
+        "updatedAt": "2022-06-15T14:02:52.184Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lemnos"
+        },
+        "description": {
+          "en-US": "company logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/2Y8LhXLnYAYqKCGEWG4EKI/94b1546dbbfc121c91b074b53fa5b3bc/lemnos-logo.jpg",
+            "details": {
+              "size": 7149,
+              "image": {
+                "width": 175,
+                "height": 32
+              }
+            },
+            "fileName": "lemnos-logo.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "6m5AJ9vMPKc8OUoQeoCS4o",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.189Z",
+        "updatedAt": "2022-06-15T14:02:52.189Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home and Kitchen"
+        },
+        "description": {
+          "en-US": "category icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/6m5AJ9vMPKc8OUoQeoCS4o/34f04735f1d86f7b89080752c7505afc/1418244847_Streamline-18-256.png",
+            "details": {
+              "size": 2977,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "1418244847_Streamline-18-256.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "1MgbdJNTsMWKI0W68oYqkU",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:52.194Z",
+        "updatedAt": "2022-06-15T14:02:52.194Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Chive logo"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/1MgbdJNTsMWKI0W68oYqkU/f409b10201b5a2e12409c6a3a2a30033/9ef190c59f0d375c0dea58b58a4bc1f0.jpeg",
+            "details": {
+              "size": 44089,
+              "image": {
+                "width": 500,
+                "height": 500
+              }
+            },
+            "fileName": "9ef190c59f0d375c0dea58b58a4bc1f0.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "KTRF62Q4gg60q6WCsWKw8",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:53.150Z",
+        "updatedAt": "2022-06-15T14:02:53.150Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "SoSo Wall Clock"
+        },
+        "description": {
+          "en-US": "by Lemnos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/KTRF62Q4gg60q6WCsWKw8/00a22ab2a0577b991f560a4b12f43b35/soso.clock.jpg",
+            "details": {
+              "size": 66927,
+              "image": {
+                "width": 1000,
+                "height": 1000
+              }
+            },
+            "fileName": "soso.clock.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "3wtvPBbBjiMKqKKga8I2Cu",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:53.157Z",
+        "updatedAt": "2022-06-15T14:02:53.157Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Normann Copenhagen"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/3wtvPBbBjiMKqKKga8I2Cu/013db30808b5426c8c84434317653a1a/zJYzDlGk.jpeg",
+            "details": {
+              "size": 12302,
+              "image": {
+                "width": 353,
+                "height": 353
+              }
+            },
+            "fileName": "zJYzDlGk.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "wtrHxeu3zEoEce2MokCSi",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:53.164Z",
+        "updatedAt": "2022-06-15T14:02:53.164Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Playsam Streamliner"
+        },
+        "description": {
+          "en-US": "Merchandise photo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/wtrHxeu3zEoEce2MokCSi/a781b57aaa586539b9fe847b155a68c9/quwowooybuqbl6ntboz3.jpg",
+            "details": {
+              "size": 27187,
+              "image": {
+                "width": 600,
+                "height": 446
+              }
+            },
+            "fileName": "quwowooybuqbl6ntboz3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "4zj1ZOfHgQ8oqgaSKm4Qo2",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:53.173Z",
+        "updatedAt": "2022-06-15T14:02:53.173Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Playsam"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/4zj1ZOfHgQ8oqgaSKm4Qo2/eef852bd9504ab06abd5b3c7523ab9ed/playsam.jpg",
+            "details": {
+              "size": 7003,
+              "image": {
+                "width": 100,
+                "height": 100
+              }
+            },
+            "fileName": "playsam.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "6t4HKjytPi0mYgs240wkG",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:02:53.184Z",
+        "updatedAt": "2022-06-15T14:02:53.184Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Toys"
+        },
+        "description": {
+          "en-US": "Category icon set"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/6t4HKjytPi0mYgs240wkG/765f475f435fbee1d31637b38814124b/toys_512pxGREY.png",
+            "details": {
+              "size": 6744,
+              "image": {
+                "width": 128,
+                "height": 128
+              }
+            },
+            "fileName": "toys_512pxGREY.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "id": "6wDAXbzkqKRAUWO3u8sh2z",
+        "type": "Asset",
+        "createdAt": "2022-06-15T14:07:54.114Z",
+        "updatedAt": "2022-06-15T14:07:54.114Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hamburger"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5u403xny70b7/6wDAXbzkqKRAUWO3u8sh2z/1d77f55c0fe375a862ef553a914bf500/photo-1568901346375-23c9450c58cd",
+            "details": {
+              "size": 336689,
+              "image": {
+                "width": 1998,
+                "height": 1660
+              }
+            },
+            "fileName": "photo-1568901346375-23c9450c58cd",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5yG2d6reNlQ1kr3c0qTqb7",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "6cd53f0f-fcf5-40ee-98cd-3a030594d0bf"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "createdAt": "2022-06-15T14:02:27Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:27Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5NLZ0sicyMuU2zhIur9R29",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "createdAt": "2022-06-15T14:02:41Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:41Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5NMHmsWIUNUhlPX4nAFtTz",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "createdAt": "2022-06-15T14:02:41Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:41Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5NNCoCFaFNSJbM8wXGUzD3",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "createdAt": "2022-06-15T14:02:41Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:41Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5NOiHGq3PaszFz44L7VEFH",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5u403xny70b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "createdAt": "2022-06-15T14:02:41Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5JyrJiiomUI3mj8CrwPKe9"
+          }
+        },
+        "updatedAt": "2022-06-15T14:02:41Z"
+      }
+    }
+  ]
+}

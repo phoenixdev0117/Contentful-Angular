@@ -1,0 +1,25 @@
+stackbitVersion: ~0.5.5
+ssgName: custom
+cmsName: contentful
+nodeVersion: '14'
+
+buildCommand: npm run build
+devCommand: npm run start --port 3000 --disable-host-check
+publishDir: dist
+
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: false
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
+
+modelsSource:
+  type: contentful
+
+models:
+  product:
+    type: page
+    urlPath: '/products/{slug}'

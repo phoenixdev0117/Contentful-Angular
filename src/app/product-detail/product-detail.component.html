@@ -1,0 +1,38 @@
+ <p *ngIf="product">
+  <mat-card attr.data-sb-object-id={{product.sys.id}} class="product-card">
+    <mat-card-header>
+      <mat-card-title data-sb-field-path=".productName">{{ product.fields.productName }}</mat-card-title>
+      <mat-card-subtitle data-sb-field-path=".sizetypecolor">{{ product.fields.sizetypecolor }}</mat-card-subtitle>
+      <mat-card-subtitle>Price: $<span data-sb-field-path=".productName">{{ product.fields.price }}</span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab *ngIf="product.fields.image" label="Image">
+          <div class="tab-container">
+            <img attr.data-sb-object-id={{product.fields.image[0].sys.id}} data-sb-field-path=".image"  class="u-marginAutoHorizontal" src="{{ product.fields.image[0].fields.file.url }}">
+            <p data-sb-field-path=".image.description">{{ product.fields.image[0].fields.description }}</p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Description">
+          <div class="tab-container">
+            <p data-sb-field-path=".productDescription" >{{ product.fields.productDescription }}</p>
+            <p data-sb-field-path=".sku" >SKU: {{ product.fields.sku || 'SKU not available' }}</p>
+          </div>
+        </mat-tab>
+        <mat-tab *ngIf="product.fields.brand" label="Brand">
+          <div class="tab-container">
+            <div class="brand-panel">
+              <div class="brand-panel-img">
+                <img src="{{ product.fields.brand.fields.logo.fields.file.url }}">
+              </div>
+              <div attr.data-sb-object-id={{product.fields.brand.sys.id}}>
+                <h3 data-sb-field-path=".companyName">{{ product.fields.brand.fields.companyName }}</h3>
+                <p data-sb-field-path=".companyDescription">{{ product.fields.brand.fields.companyDescription }}</p>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</p>

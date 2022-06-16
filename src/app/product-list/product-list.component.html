@@ -1,0 +1,14 @@
+<ul class="u-listReset product-grid">
+  <li class="u-marginBottom" *ngFor="let product of products">
+    <mat-card attr.data-sb-object-id={{product.sys.id}} class="product-card">
+      <mat-card-header>
+        <mat-card-title data-sb-field-path='.productName' >{{ product.fields.productName }}</mat-card-title>
+        <mat-card-subtitle><strong data-sb-field-path='.price'>Price: ${{ product.fields.price }}</strong></mat-card-subtitle>
+      </mat-card-header>
+      <img attr.data-sb-object-id={{product.fields.image[0].sys.id}} data-sb-field-path='.image' mat-card-image src="{{ product.fields.image[0].fields.file.url }}" class="product-image"/>
+      <mat-card-actions class="u-marginTopAuto">
+        <a mat-button [routerLink]="['/products', product.fields.slug]">View details</a>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+</ul>

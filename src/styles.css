@@ -1,0 +1,42 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.u-listReset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.u-listReset li {
+  margin: 0;
+}
+
+.u-marginBottom {
+  margin-bottom: 2em !important;
+}
+
+.u-marginTopAuto {
+  margin-top: auto;
+}
+
+.u-marginAutoHorizontal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

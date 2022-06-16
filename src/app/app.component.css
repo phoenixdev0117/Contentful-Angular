@@ -1,0 +1,19 @@
+.logo {
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container {
+  display: block;
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.app-title {
+  margin-left: auto;
+  font-size: .8em;
+}

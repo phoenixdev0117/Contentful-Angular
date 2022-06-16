@@ -1,0 +1,16 @@
+.tab-container {
+  padding: 2em 0;
+}
+
+.brand-panel {
+  display: flex;
+}
+
+.brand-panel-img {
+  flex: 0 0 10em;
+  margin-right: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

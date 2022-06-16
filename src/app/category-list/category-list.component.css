@@ -1,0 +1,24 @@
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em;
+}
+
+.category-grid > * {
+  flex: 1 0 5em;
+  margin: 0.5em;
+
+  min-width: 20em;
+  max-width: 37.5em;
+}
+
+.category-card {
+  height: 100%;
+}
+
+.category-image {
+  width: 3em;
+  height: 3em;
+
+  margin-left: auto;
+}

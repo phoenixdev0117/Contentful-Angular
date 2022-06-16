@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Settings</mat-card-title>
+    <mat-card-subtitle>Use your own space</mat-card-subtitle>
+  </mat-card-header>
+  <p>
+    This demo application is connected to a read-only demo space. Use the form below to connect to your own space. The space
+    needs to be created implementing the product catalogue data template from Contentful to function properly.
+  </p>
+  <p>Once a valid space id and api for the deliver api is provided, the credentials need to be saved in the current browser
+    tab session. For convenience a deeplink to the settings dialogue can be created.
+  </p>
+  <mat-card-content>
+    <form #settingsForm="ngForm" (submit)="saveConfig()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Space Id" name="spaceId" [(ngModel)]="config.space" required>
+        <mat-hint align="start" *ngIf="errorMessages.space">
+          <strong>12 alpha-numeric characters required</strong>
+        </mat-hint>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="CDA access token" name="accessToken" [(ngModel)]="config.accessToken" required>
+        <mat-hint align="start" *ngIf="errorMessages.accessToken">
+          <strong>64 alpha-numeric characters required</strong>
+        </mat-hint>
+      </mat-form-field>
+
+      <p *ngIf="deepLink">
+        You can quickly access this configuration by calling
+        <a href="{{ deepLink }}">this URL</a>.
+        <p>
+
+          <p>
+            <button mat-button [disabled]="settingsForm.invalid">Save configuration</button>
+            <button mat-button (click)="resetConfig()" type="reset">Reset</button>
+          </p>
+    </form>
+  </mat-card-content>
+</mat-card>

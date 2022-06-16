@@ -1,0 +1,21 @@
+<div>
+  <ul class="u-listReset category-grid">
+    <li *ngFor="let category of categories">
+      <mat-card class="category-card">
+        <mat-card-header>
+          <img *ngIf="category.fields.icon" class="category-image" src="{{ category.fields.icon.fields.file.url }}">
+          <mat-card-title>{{ category.fields.title }}</mat-card-title>
+          <mat-card-subtitle>{{ category.fields.categoryDescription }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let product of productsForCategories[category.sys.id]">
+              <a mat-line [routerLink]="['/products', product.fields.slug]">{{product.fields.productName}}</a>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+</div>
+
