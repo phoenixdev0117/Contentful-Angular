@@ -1,11 +1,12 @@
 import { Injectable, isDevMode } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { createClient, Entry, Space, ContentfulClientApi } from 'contentful';
 
 // change these to include your own settings
 const DEFAULT_CONFIG = {
   credentials: {
     space: '5u403xny70b7',
-    accessToken: isDevMode? 'kkQ9luy61vXX90CQrIMGH3sU_w6dmwZo7-4dxkQ1Lf4': 'CYQDNUgaBV4fdePBW8MGMJT32iE-Tcubo823Q0Gtu9w'
+    accessToken: isDevMode ? 'kkQ9luy61vXX90CQrIMGH3sU_w6dmwZo7-4dxkQ1Lf4' : 'CYQDNUgaBV4fdePBW8MGMJT32iE-Tcubo823Q0Gtu9w'
   },
 
   contentTypeIds: {
@@ -21,7 +22,8 @@ export class ContentfulService {
     space: string,
     accessToken: string,
   };
-  titleHandlers: Function[]
+  titleHandlers: Function[];
+  public changedObjectIds: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 
   constructor() {
     try {
@@ -54,14 +56,14 @@ export class ContentfulService {
     return this.cdaClient.getEntries(Object.assign({
       content_type: DEFAULT_CONFIG.contentTypeIds.product
     }, query))
-    .then(res => res.items);
+      .then(res => res.items);
   }
 
   // fetch products with a given slug
   // and return one of them
   getProduct(slug: string): Promise<Entry<any>> {
     return this.getProducts({ 'fields.slug': slug })
-    .then(items => items[0])
+      .then(items => items[0])
   }
 
   // fetch categories
@@ -69,18 +71,18 @@ export class ContentfulService {
     return this.cdaClient.getEntries({
       content_type: DEFAULT_CONFIG.contentTypeIds.category
     })
-    .then(res => res.items);
+      .then(res => res.items);
   }
 
   // return a custom config if available
-  getConfig(): { space: string, accessToken: string} {
+  getConfig(): { space: string, accessToken: string } {
     return this.config !== DEFAULT_CONFIG.credentials ?
       Object.assign({}, this.config) :
       { space: '', accessToken: '' };
   }
 
   // set a new config and store it in localStorage
-  setConfig(config: {space: string, accessToken: string}) {
+  setConfig(config: { space: string, accessToken: string }) {
     localStorage.setItem('catalogConfig', JSON.stringify(config));
     this.config = config;
 

@@ -16,6 +16,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { CategoryListComponent } from './category-list/category-list.component';
 
 import { ContentfulService } from './contentful.service';
+import { StackbitService } from './stackbit.service';
 
 // check this and make a module out of it
 const routes: Routes = [
@@ -52,7 +53,7 @@ const routes: Routes = [
     MatTabsModule,
     MatInputModule
   ],
-  providers: [ContentfulService],
+  providers: [ContentfulService, StackbitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
