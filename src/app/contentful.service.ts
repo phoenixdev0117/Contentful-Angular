@@ -62,7 +62,7 @@ export class ContentfulService {
       .then(res => res.items);
   }
 
-  getProductsWithUpdated(query?: object): BehaviorSubject<Promise<Entry<any>[]>> {
+  getProductsWithUpdates(query?: object): BehaviorSubject<Promise<Entry<any>[]>> {
     const productsSubject = new BehaviorSubject(this.getProducts(query));
     this.stackbitService.contentChanged.subscribe({
       next: (event: StackbitEvent) => {

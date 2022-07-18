@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
-    let productsSubject = this.contentfulService.getProductsWithUpdated();
+    let productsSubject = this.contentfulService.getProductsWithUpdates();
 
     productsSubject.subscribe({
       next: (value) => value.then(products => this.products = products)
