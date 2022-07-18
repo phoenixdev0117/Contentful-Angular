@@ -1,6 +1,7 @@
-import { Injectable, isDevMode } from '@angular/core';
+import { Injectable, isDevMode, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { createClient, Entry, Space, ContentfulClientApi } from 'contentful';
+import { StackbitEvent, StackbitService } from './stackbit.service';
 
 // change these to include your own settings
 const DEFAULT_CONFIG = {
@@ -24,8 +25,10 @@ export class ContentfulService {
   };
   titleHandlers: Function[];
   public changedObjectIds: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
+  public productsEvent: EventEmitter<any> = new EventEmitter<any>();
+  public productEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private stackbitService: StackbitService) {
     try {
       this.config = JSON.parse(localStorage.catalogConfig);
     } catch (e) {
@@ -59,6 +62,19 @@ export class ContentfulService {
       .then(res => res.items);
   }
 
+  getProductsWithUpdated(query?: object): BehaviorSubject<Promise<Entry<any>[]>> {
+    const productsSubject = new BehaviorSubject(this.getProducts(query));
+    this.stackbitService.contentChanged.subscribe({
+      next: (event: StackbitEvent) => {
+        if (event.changedContentTypes.includes(DEFAULT_CONFIG.contentTypeIds.product)) {
+          productsSubject.next(this.getProducts(query));
+        }
+      }
+    })
+    
+    return productsSubject;
+  }
+
   // fetch products with a given slug
   // and return one of them
   getProduct(slug: string): Promise<Entry<any>> {
@@ -66,6 +82,18 @@ export class ContentfulService {
       .then(items => items[0])
   }
 
+  getProductWithUpdates(slug: string): BehaviorSubject<Promise<Entry<any>>> {
+    const productSubject = new BehaviorSubject(this.getProduct(slug));
+    this.stackbitService.contentChanged.subscribe({
+      next: (event: StackbitEvent) => {
+        if (event.changedContentTypes.includes(DEFAULT_CONFIG.contentTypeIds.product)) {
+          productSubject.next(this.getProduct(slug));
+        }
+      }
+    })
+    return productSubject;
+  }
+  
   // fetch categories
   getCategories(): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries({

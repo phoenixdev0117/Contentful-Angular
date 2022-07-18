@@ -3,6 +3,8 @@ ssgName: custom
 cmsName: contentful
 nodeVersion: '14'
 
+customContentReload: false
+
 buildCommand: npm run Your Build Command
 devCommand: npm run start
 publishDir: dist

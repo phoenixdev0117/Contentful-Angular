@@ -1,7 +1,9 @@
-import { switchMap } from 'rxjs/operators';
+import { combineLatest, switchMap } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { StackbitEvent, StackbitService } from '../stackbit.service';
 import { Entry } from 'contentful';
 
 @Component({
@@ -13,13 +15,14 @@ export class ProductDetailComponent implements OnInit {
   product: Entry<any>;
 
   constructor(
-    private ContentfulService: ContentfulService,
+    private contentfulService: ContentfulService,
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {
+
+  ngOnInit() {    
     this.route.paramMap
-    .pipe(switchMap((params: ParamMap) => this.ContentfulService.getProduct(params.get('slug'))))
-    .subscribe(product => this.product = product);
+    .pipe(switchMap((params: ParamMap) => this.contentfulService.getProductWithUpdates(params.get('slug'))))
+    .subscribe(value => value.then(product => this.product = product));
   }
 }
