@@ -3,9 +3,20 @@ ssgName: custom
 cmsName: contentful
 nodeVersion: '14'
 
-buildCommand: npm run Your Build Command
-devCommand: npm run start
+customContentReload: false
+
+buildCommand: npm run build
+devCommand: npm run dev:local
 publishDir: dist
 
 modelsSource:
   type: contentful
+
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN

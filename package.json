@@ -4,10 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "dev:local": "ng serve --port 3000 --disable-host-check",
-    "start": "node done.js && ng serve --port 3030 --disable-host-check",
-    "build": "ng build --base-href /product-catalogue-web.ts/",
-    "test": "ng test",
+    "config": "ts-node set-env.ts",
+    "dev:local": "npm run config && ng serve --port 3000 --disable-host-check",
+    "start": "npm run config && node done.js && ng serve --port 3030 --disable-host-check",
+    "build": "npm run config && ng build --base-href /product-catalogue-web.ts/",
+    "test": "npm run config && ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -36,6 +37,7 @@
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "~18.0.0",
     "codelyzer": "~6.0.2",
+    "dotenv": "^16.0.1",
     "jasmine-core": "~4.2.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.0",

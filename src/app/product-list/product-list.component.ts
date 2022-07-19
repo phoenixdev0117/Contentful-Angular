@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
-import { StackbitEvent, StackbitService } from '../stackbit.service';
 import { Entry } from 'contentful';
 
 @Component({
@@ -11,19 +10,13 @@ import { Entry } from 'contentful';
 export class ProductListComponent implements OnInit {
   products: Entry<any>[];
 
-  constructor(private contentfulService: ContentfulService, private stackbitService: StackbitService) { }
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
-    this.contentfulService.getProducts()
-    .then(products => this.products = products)
+    let productsSubject = this.contentfulService.getProducts();
 
-    this.stackbitService.onChange.subscribe({
-      next: (event: StackbitEvent) => {
-          if(event.changedContentTypes.includes('product')) {
-            this.contentfulService.getProducts()
-              .then(products => this.products = products)
-          }
-      }
-    })
+    productsSubject.subscribe({
+      next: (value) => value.then(products => this.products = products)
+    });
   }
 }
