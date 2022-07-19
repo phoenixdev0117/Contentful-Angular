@@ -7,7 +7,7 @@
     "config": "ts-node set-env.ts",
     "dev:local": "npm run config && ng serve --port 3000 --disable-host-check",
     "start": "npm run config && node done.js && ng serve --port 3030 --disable-host-check",
-    "build": "npm run config && ng build --base-href /product-catalogue-web.ts/",
+    "build": "npm run config && ng build",
     "test": "npm run config && ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
