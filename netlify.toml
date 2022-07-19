@@ -1,6 +1,6 @@
 [build]
   publish = "dist/stackbit-angular-contentful"
-  command = "ng build"
+  command = "npm run build"
 [[redirects]]
   from = "/*"
   to = "/index.html"
