@@ -13,9 +13,10 @@ modelsSource:
   type: contentful
 
 import:
-    type: contentful
-    contentFile: contentful/export.json
-    uploadAssets: true
-    assetsDirectory: contentful
-    spaceIdEnvVar: CONTENTFUL_SPACE_ID
-    accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
