@@ -22,7 +22,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {    
     this.route.paramMap
-    .pipe(switchMap((params: ParamMap) => this.contentfulService.getProductWithUpdates(params.get('slug'))))
+    .pipe(switchMap((params: ParamMap) => this.contentfulService.getProduct(params.get('slug'))))
     .subscribe(value => value.then(product => this.product = product));
   }
 }

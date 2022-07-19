@@ -42,3 +42,8 @@ testem.log
 Thumbs.db
 
 /.angular
+
+# Ignoring environment file to make it auto generated based on .env file
+/src/environments/environment.ts
+
+.env

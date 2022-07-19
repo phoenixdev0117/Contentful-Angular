@@ -2,12 +2,13 @@ import { Injectable, isDevMode, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { createClient, Entry, Space, ContentfulClientApi } from 'contentful';
 import { StackbitEvent, StackbitService } from './stackbit.service';
+import { environment } from './../environments/environment';
 
 // change these to include your own settings
 const DEFAULT_CONFIG = {
   credentials: {
-    space: '5u403xny70b7',
-    accessToken: isDevMode ? 'kkQ9luy61vXX90CQrIMGH3sU_w6dmwZo7-4dxkQ1Lf4' : 'CYQDNUgaBV4fdePBW8MGMJT32iE-Tcubo823Q0Gtu9w'
+    space: environment.contentfulSpaceId,
+    accessToken: isDevMode ? environment.contentfulPreviewToken : environment.contentfulDeliveryToken
   },
 
   contentTypeIds: {
@@ -24,10 +25,6 @@ export class ContentfulService {
     accessToken: string,
   };
   titleHandlers: Function[];
-  public changedObjectIds: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
-  public productsEvent: EventEmitter<any> = new EventEmitter<any>();
-  public productEvent: EventEmitter<any> = new EventEmitter<any>();
-
   constructor(private stackbitService: StackbitService) {
     try {
       this.config = JSON.parse(localStorage.catalogConfig);
@@ -55,19 +52,19 @@ export class ContentfulService {
   }
 
   // fetch products
-  getProducts(query?: object): Promise<Entry<any>[]> {
+  getProductsFromContentful(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: DEFAULT_CONFIG.contentTypeIds.product
     }, query))
       .then(res => res.items);
   }
 
-  getProductsWithUpdates(query?: object): BehaviorSubject<Promise<Entry<any>[]>> {
-    const productsSubject = new BehaviorSubject(this.getProducts(query));
+  getProducts(query?: object): BehaviorSubject<Promise<Entry<any>[]>> {
+    const productsSubject = new BehaviorSubject(this.getProductsFromContentful(query));
     this.stackbitService.contentChanged.subscribe({
       next: (event: StackbitEvent) => {
         if (event.changedContentTypes.includes(DEFAULT_CONFIG.contentTypeIds.product)) {
-          productsSubject.next(this.getProducts(query));
+          productsSubject.next(this.getProductsFromContentful(query));
         }
       }
     })
@@ -77,17 +74,17 @@ export class ContentfulService {
 
   // fetch products with a given slug
   // and return one of them
-  getProduct(slug: string): Promise<Entry<any>> {
-    return this.getProducts({ 'fields.slug': slug })
+  getProductFromContentful(slug: string): Promise<Entry<any>> {
+    return this.getProductsFromContentful({ 'fields.slug': slug })
       .then(items => items[0])
   }
 
-  getProductWithUpdates(slug: string): BehaviorSubject<Promise<Entry<any>>> {
-    const productSubject = new BehaviorSubject(this.getProduct(slug));
+  getProduct(slug: string): BehaviorSubject<Promise<Entry<any>>> {
+    const productSubject = new BehaviorSubject(this.getProductFromContentful(slug));
     this.stackbitService.contentChanged.subscribe({
       next: (event: StackbitEvent) => {
         if (event.changedContentTypes.includes(DEFAULT_CONFIG.contentTypeIds.product)) {
-          productSubject.next(this.getProduct(slug));
+          productSubject.next(this.getProductFromContentful(slug));
         }
       }
     })

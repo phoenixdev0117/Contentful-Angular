@@ -22,7 +22,7 @@ export class CategoryListComponent implements OnInit {
       this.categories = categories;
 
       return Promise.all(this.categories.map(
-        category => this.contentfulService.getProducts({
+        category => this.contentfulService.getProductsFromContentful({
           'fields.categories.sys.id': category.sys.id
         })
       ))
