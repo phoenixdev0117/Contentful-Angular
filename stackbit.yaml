@@ -5,9 +5,17 @@ nodeVersion: '14'
 
 customContentReload: false
 
-buildCommand: npm run Your Build Command
-devCommand: npm run start
+buildCommand: npm run build
+devCommand: npm run dev:local
 publishDir: dist
 
 modelsSource:
   type: contentful
+
+import:
+    type: contentful
+    contentFile: contentful/export.json
+    uploadAssets: true
+    assetsDirectory: contentful
+    spaceIdEnvVar: CONTENTFUL_SPACE_ID
+    accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
