@@ -3,10 +3,10 @@ ssgName: custom
 cmsName: contentful
 nodeVersion: '14'
 
-customContentReload: false
+customContentReload: true
 
 buildCommand: npm run build
-devCommand: npm run dev:local
+devCommand: npm run start
 publishDir: dist
 
 modelsSource:
@@ -20,3 +20,14 @@ import:
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
   deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
   previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
+
+__unsafe_internal_stackbitRunnerOptions:
+  displayName: Angular
+  triggerInstallFiles:
+    - package.json
+    - package-lock.json
+  patterns:
+    errorState:
+      - 'Failed to compile'
+    doneStart:
+      - 'Angular Live Development Server is listening'
