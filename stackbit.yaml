@@ -1,4 +1,4 @@
-stackbitVersion: ~0.5.5
+stackbitVersion: ~0.5.0
 ssgName: custom
 cmsName: contentful
 nodeVersion: '14'
