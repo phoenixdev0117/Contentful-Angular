@@ -26,6 +26,8 @@ __unsafe_internal_stackbitRunnerOptions:
   triggerInstallFiles:
     - package.json
     - package-lock.json
+  directPaths:
+    - '/ng-cli-ws/**'
   patterns:
     errorState:
       - 'Failed to compile'

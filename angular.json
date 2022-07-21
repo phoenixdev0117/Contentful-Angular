@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cf-angular-tutorial": {
+    "stackbit-angular-contentful": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -49,18 +49,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cf-angular-tutorial:build"
+            "browserTarget": "stackbit-angular-contentful:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cf-angular-tutorial:build:production"
+              "browserTarget": "stackbit-angular-contentful:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cf-angular-tutorial:build"
+            "browserTarget": "stackbit-angular-contentful:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "cf-angular-tutorial-e2e": {
+    "stackbit-angular-contentful-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -104,7 +104,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "cf-angular-tutorial:serve"
+            "devServerTarget": "stackbit-angular-contentful:serve"
           }
         },
         "lint": {
@@ -121,7 +121,7 @@
       }
     }
   },
-  "defaultProject": "cf-angular-tutorial",
+  "defaultProject": "stackbit-angular-contentful",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
