@@ -6,6 +6,7 @@
     "ng": "ng",
     "config": "ts-node set-env.ts",
     "dev": "npm run config && ng serve --port 3000 --disable-host-check",
+    "start": "npm run config && ng serve --port 3030 --disable-host-check",
     "build": "npm run config && ng build",
     "test": "npm run config && ng test",
     "lint": "ng lint",

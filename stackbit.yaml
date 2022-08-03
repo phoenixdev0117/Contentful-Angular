@@ -4,11 +4,13 @@ nodeVersion: '16'
 
 ssgName: custom
 buildCommand: npm run build
-devCommand: "npm run config && ./node_modules/.bin/ng serve  --port {PORT} --disable-host-check"
+devCommand: npm run start
+#"npm run config && ./node_modules/.bin/ng serve  --port {PORT} --disable-host-check"
 
 publishDir: dist
 experimental:
   ssg:
+    name: angular-test
     logPatterns:
       up: 'Angular Live Development Server is listening'
     passthrough:
