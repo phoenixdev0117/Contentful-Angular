@@ -21,15 +21,8 @@ import:
   deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
   previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
 
-__unsafe_internal_stackbitRunnerOptions:
-  displayName: Angular
-  triggerInstallFiles:
-    - package.json
-    - package-lock.json
-  directPaths:
+experimental:
+  logPatterns:
+    up: 'Angular Live Development Server is listening'
+  passthrough:
     - '/ng-cli-ws/**'
-  patterns:
-    errorState:
-      - 'Failed to compile'
-    doneStart:
-      - 'Angular Live Development Server is listening'
