@@ -9,8 +9,8 @@
       <mat-tab-group>
         <mat-tab *ngIf="product.fields.image" label="Image">
           <div class="tab-container">
-            <img attr.data-sb-object-id={{product.fields.image[0].sys.id}} data-sb-field-path=".image"  class="u-marginAutoHorizontal" src="{{ product.fields.image[0].fields.file.url }}">
-            <p data-sb-field-path=".image.description">{{ product.fields.image[0].fields.description }}</p>
+            <img attr.data-sb-field-path=".image.0" class="u-marginAutoHorizontal" src="{{ product.fields.image[0].fields.file.url }}">
+            <p>{{ product.fields.image[0].fields.description }}</p>
           </div>
         </mat-tab>
         <mat-tab label="Description">
