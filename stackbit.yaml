@@ -4,7 +4,7 @@ nodeVersion: '16'
 
 ssgName: custom
 buildCommand: npm run build
-devCommand: npm run config && ./node_modules/.bin/ng serve  --port {PORT} --disable-host-check
+devCommand: npm run config --if-present && ./node_modules/.bin/ng serve  --port {PORT} --disable-host-check
 
 publishDir: dist
 experimental:
