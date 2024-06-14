@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
 import { RouterModule, Routes }   from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
@@ -17,6 +18,7 @@ import { CategoryListComponent } from './category-list/category-list.component';
 
 import { ContentfulService } from './contentful.service';
 import { StackbitService } from './stackbit.service';
+import { DrupalService } from './drupal.service';
 
 // check this and make a module out of it
 const routes: Routes = [
@@ -43,7 +45,8 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatTabsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   exports: [
     MatListModule,
@@ -53,7 +56,7 @@ const routes: Routes = [
     MatTabsModule,
     MatInputModule
   ],
-  providers: [ContentfulService, StackbitService],
+  providers: [ContentfulService, StackbitService, DrupalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
