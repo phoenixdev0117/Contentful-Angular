@@ -1,19 +1,13 @@
 stackbitVersion: ~0.5.0
-cmsName: contentful
-nodeVersion: '16'
-
 ssgName: custom
-buildCommand: npm run build
-devCommand: npm run config --if-present && ./node_modules/.bin/ng serve  --port {PORT} --disable-host-check
+cmsName: contentful
+nodeVersion: '14'
 
+customContentReload: true
+
+buildCommand: npm run build
+devCommand: npm run start
 publishDir: dist
-experimental:
-  ssg:
-    name: angular-test
-    logPatterns:
-      up: 'Angular Live Development Server is listening'
-    passthrough:
-      - '/ng-cli-ws/**'
 
 modelsSource:
   type: contentful
@@ -26,3 +20,16 @@ import:
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
   deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
   previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
+
+__unsafe_internal_stackbitRunnerOptions:
+  displayName: Angular
+  triggerInstallFiles:
+    - package.json
+    - package-lock.json
+  directPaths:
+    - '/ng-cli-ws/**'
+  patterns:
+    errorState:
+      - 'Failed to compile'
+    doneStart:
+      - 'Angular Live Development Server is listening'
