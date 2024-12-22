@@ -1,0 +1,35 @@
+stackbitVersion: ~0.5.0
+ssgName: custom
+cmsName: contentful
+nodeVersion: '14'
+
+customContentReload: true
+
+buildCommand: npm run build
+devCommand: npm run start
+publishDir: dist
+
+modelsSource:
+  type: contentful
+
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
+
+__unsafe_internal_stackbitRunnerOptions:
+  displayName: Angular
+  triggerInstallFiles:
+    - package.json
+    - package-lock.json
+  directPaths:
+    - '/ng-cli-ws/**'
+  patterns:
+    errorState:
+      - 'Failed to compile'
+    doneStart:
+      - 'Angular Live Development Server is listening'
